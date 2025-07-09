@@ -1,20 +1,19 @@
-variable "aws_region" {
-    description = "AWS region to deploy into"
-    type = string
-}
-
 variable "ami_id" {
-    description = "AMI ID to use for EC2 instance"
-    type = string
+  default = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 in us-west-2
 }
 
 variable "instance_type" {
-    description = "EC2 instance type"
-    type  = string
+  default = "t3.medium"
 }
 
 variable "key_name" {
-    description = "key pair name for SSH access"
-    type = string
+  description = "SSH key name"
+  type        = string
+}
 
+
+variable "aws_region" {
+  description = "The AWS region to deploy resources into"
+  type        = string
+  default     = "us-west-2"
 }
