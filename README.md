@@ -58,3 +58,15 @@ This project automates the deployment of a WordPress site on AWS using Terraform
 
    ```bash
    terraform init
+
+
+AWS Cloud
+├── VPC (single AZ)
+│   ├── Public Subnet
+│   │   ├── EC2 Instance (WordPress + MariaDB)
+│   │   │   ├── Apache + PHP + MariaDB
+│   │   │   └── User Data script auto-installs WordPress
+│   │   └── (Optional) Bastion Host
+│   │       └── SSH Access to WordPress EC2
+│   └── Internet Gateway (attached to VPC)
+
