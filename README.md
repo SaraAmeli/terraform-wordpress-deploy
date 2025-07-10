@@ -61,19 +61,19 @@ This project automates the deployment of a WordPress site on AWS using Terraform
 
 
 AWS Cloud
-├── VPC (single AZ)
+  VPC (single AZ)
 
-│   ├── Public Subnet
+    Public Subnet
 
-│   │   ├── EC2 Instance (WordPress + MariaDB)
+      EC2 Instance (WordPress + MariaDB)
 
-│   │   │   ├── Apache + PHP + MariaDB
+        Apache + PHP + MariaDB
 
-│   │   │   └── User Data script auto-installs WordPress
+          User Data script auto-installs WordPress
 
-│   │   └── (Optional) Bastion Host
+      (Optional) Bastion Host
 
-│   │       └── SSH Access to WordPress EC2
+        SSH Access to WordPress EC2
 
-│   └── Internet Gateway (attached to VPC)
+    Internet Gateway (attached to VPC)
 
